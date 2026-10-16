@@ -1,0 +1,11 @@
+services:
+  ecopilot-example2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecopilot-hotel-dpgf-v2
+    ports:
+      - "3200:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
